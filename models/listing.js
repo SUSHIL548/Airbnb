@@ -26,16 +26,7 @@ const listingSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User",
     },
-    /*geometry: {
-       type: {
-        type: String, //Don't do `{location: {type: String}}`
-        enum:['Point'], //'location.type' must be point
-        required: true
-       },
-    coordinates: {
-        type: [Number],
-        requires: true
-    },*/
+    
 
 });
 
