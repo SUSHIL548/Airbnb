@@ -92,7 +92,7 @@ app.get("/", (req,res) => {
 })
    
         
-        app.all("*", ( req, res, next ) => { next(new ExpressError(404, "Page Not Found!")); });
+        app.all("/{*splat}", ( req, res, next ) => { next(new ExpressError(404, "Page Not Found!")); });
          app.use((err, req, res, next) => 
             { let { statusCode = 500, message = "Something went wrong!" } = err;
           res.status(statusCode).render("error.ejs", {message}); 
